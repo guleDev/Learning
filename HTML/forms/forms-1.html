@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Form</title>
+</head>
+<body>
+    <form action="#" method="get" autocomplete="off">
+        <p>Formulário</p>
+        <p>
+            Nome:
+            <input type="text" id="nome" name="nomes" placeholder="Nome" required>
+            <label for="nome"></label>
+        </p>
+
+        <p>
+            Sou um dev
+            <input type="checkbox" id="dev" name="sim">
+            <label for="dev"></label>
+        </p>
+        
+        <p>
+            Dev type: <br>
+            Frontend
+            <input type="radio" id="frontend" name="devtype" value="frontend">
+            <label for="devtype"></label>
+            Backend
+            <input type="radio" id="backend" name="devtype" value="backend">
+            <label for="devtype"></label>
+            FullStack
+            <input type="radio" id="fullstack" name="devtype" value="fullstack">
+            <label for="devtype"></label>
+        </p>
+
+        <p>
+            Data:
+            <input type="date" name="date" id="date" value="2004-08-25">
+            <label for="date"></label>
+        </p>
+
+        <p>
+            Data:
+            <input type="datetime-local" name="datetime" id="datetime" value="2004-08-25T05:00">
+            <label for="datetime"></label>
+        </p>
+
+        <p>
+            Hora:
+            <input type="time" name="time" id="time" value="05:00:00">
+            <label for="time"></label>
+        </p>
+        
+        <p>
+            Cor preferida:
+            <input type="color" name="cor" id="cor" value="#33d17a">
+            <label for="cor"></label>
+        </p>
+
+        <p>
+            E-mail:
+            <input type="email" name="email" id="email" placeholder="email@email.com">
+            <label for="email"></label>
+        </p>
+
+        <p>
+            Foto:
+            <input type="file" name="file" id="file" accept=".png, .svg , image/*">
+            <label for="file"></label>
+        </p>
+
+        <p>
+            Numero:
+            <input type="number" name="number" id="number" min="3" max="15">
+            <label for="number"></label>
+        </p>
+
+        <p>
+            Senha:
+            <input type="password" name="password" id="password" placeholder="senha">
+            <label for="password"></label>
+        </p>
+
+        <p>
+            Range:
+            <input type="range" name="range" id="range">
+            <label for="range"></label>
+            
+            <datalist>
+                <option value="0" label="0%">
+                <option value="10">
+                <option value="20">
+                <option value="30">
+                <option value="40">
+                <option value="50" label="50%">
+                <option value="60">
+                <option value="70">
+                <option value="80">
+                <option value="90">
+                <option value="100" label="100%">
+            </datalist>
+        </p>
+
+        <p>
+            Url:
+            <input type="url" name="url" id="url">
+            <label for="url"></label>
+        </p>
+
+        <p>
+            Search:
+            <input type="search" name="search" id="search">
+            <label for="search"></label>
+        </p>
+
+        <p>
+            <label for="select">Selecione</label>
+            <select name="select" id="select">
+                <optgroup label="grupo um">
+                    <option value="um" label="valor um">
+                    <option value="dois" label="valor dois" disabled>
+                    <option value="tres" label="valor três" selected>
+                    <option value="quatro" label="valor quatro">
+                </optgroup>
+                <optgroup label="grupo dois">
+                    <option value="um" label="valor um">
+                    <option value="dois" label="valor dois">
+                    <option value="tres" label="valor três">
+                </optgroup>
+            </select>
+        </p>
+
+        <p>
+            Text area:
+            <label for="textarea"></label>
+            <textarea name="textarea" id="textarea" rows="8" cols="15">
+                linha um
+                linha dois
+            </textarea>
+        </p>
+
+        <p>
+            <button type="reset">
+                Reset
+            </button>
+            <button type="submit">
+                Enviar
+            </button>
+        </p>
+    </form>
+</body>
+</html>
