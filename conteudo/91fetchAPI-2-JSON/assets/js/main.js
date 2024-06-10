@@ -1,29 +1,29 @@
+const resultado = document.querySelector('.resultado');
 
-document.addEventListener('click', e =>{
-    const el = e.target;
-    const tag = el.tagName.toLowerCase();
-    
-    if(tag === 'a') {
-        e.preventDefault();
-        carregaPagina(el);
-    }
-});
+fetch('pessoas.json')
+ .then(resposta => resposta.json())
+ .then(json => carregaElementosNaPagina(json));
 
-async function carregaPagina(el) {
-    try{
-        const href = el.getAttribute('href');
-        const response = await fetch(href);
+function carregaElementosNaPagina(json) {
+    const table = document.createElement('table');
     
-        if(response.status !== 200) throw new Error('Erro 414!')
+    for(let pessoa of json) {
+        const tr = document.createElement('tr');
         
-        const html = await response.text();
-        carregaResultado(html)
-    } catch(e) {
-        console.log(e);
-    }
-}
+        let td = document.createElement('td');
+        td.innerHTML = pessoa.nome;
+        tr.appendChild(td);
+        table.appendChild(tr);
 
-function carregaResultado(response) {
-    const resultado = document.querySelector('.resultado');
-    resultado.innerHTML = response;
+        td = document.createElement('td');
+        td.innerHTML = pessoa.idade;
+        tr.appendChild(td);
+        table.appendChild(tr);
+
+        td = document.createElement('td');
+        td.innerHTML = pessoa.salario;
+        tr.appendChild(td);
+        table.appendChild(tr);
+    }
+    resultado.appendChild(table);
 }
